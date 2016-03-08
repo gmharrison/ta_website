@@ -1,0 +1,65 @@
+body{
+    font-family: 'Lato', sans-serif;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+.btn-main{
+    background: #4ac8ef;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 1em 2em;
+    border-radius: 6px;
+    border-bottom: 4px solid #9adaf1;
+    transition: all 0.2s ease;
+    
+    &:hover{
+        background-color: #5bd7f4;
+        color: white;
+    }
+}
+.jumbotron{
+    height: 500px;
+    position: relative;
+    background-image: url("http://s14.postimg.org/mszq3r0ep/landingpage_photo.png");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: 0 -35px;
+    .content-container{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        h3.header{
+            color: white;
+          
+        }
+        
+    }
+}
+.container{
+    position: relative;
+    .sub-jumbotron.row{
+        margin-top: 40px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        .landing-img{
+            width: 200px;
+            height: auto;
+        }
+        .col-md-4{
+            p{
+                padding: 20px 50px;
+                text-align: center;
+            }
+        }
+    }
+}
