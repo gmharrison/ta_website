@@ -1,3 +1,13 @@
+
 $(function(){
-    // jQuery goes here.
+    
+    $(".btn.survey-select").click(function () {
+        $(this).toggleClass("active");
+    });
+    
+    
+    
+    
+    
 });
+    
