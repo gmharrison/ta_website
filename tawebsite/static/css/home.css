@@ -150,4 +150,16 @@ body {
   padding: 30px 10% 0 30px;
   float: right; }
 
+.back-btn-container {
+  overflow: visible;
+  height: 0px; }
+
+#back-btn {
+  z-index: 1;
+  margin: 30px;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  border-radius: 45px; }
+
 /*# sourceMappingURL=home.css.map */

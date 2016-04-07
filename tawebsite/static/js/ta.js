@@ -21,6 +21,8 @@ $(function(){
         $slide.show().addClass('active');
         nextSlideID = $slide.data('next');
         prevSlideID = $slide.data('previous');
+        if(!prevSlideID) $('#back-btn').hide();
+        else $('#back-btn').show();
     }
     
     // Page load set up
