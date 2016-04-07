@@ -57,6 +57,9 @@ body{
         background-color: #5bd7f4;
         color: white;
     }
+    &:focus{
+        color: #e5e5e5;
+    }
 }
 .btn.survey-select{
     background-color: #F4F7F8;
@@ -83,10 +86,10 @@ body{
     height: 500px;
     position: relative;
     background: #848484;
-    /*background-image: url("http://s14.postimg.org/mszq3r0ep/landingpage_photo.png");
-    background-repeat: no-repeat; 
+    background-image: url("/static/img/landingpage-photo2.png");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -35px;*/
+    background-position: 0 -150px;
     .content-container{
         position: absolute;
         text-align: center;

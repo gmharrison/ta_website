@@ -2,10 +2,26 @@
 {% load staticfiles %}
 
 {% block content_main %}
-
-{% include "tawebsite/cornerstone_intro.html" %}
+<div class="back-btn-container"><button id="back-btn" class="glyphicon glyphicon-chevron-left"><span></span></button></div>
+<div class="slides">
+    
+    <div class="slide active" id="slide1">{% include "tawebsite/survey_partials/survey_intro.html" %}</div>
+    
+    <div class="slide" id="slide-academic" 
+        data-previous="slide1" data-next="slide1"
+        >{% include "tawebsite/survey_partials/academic_intro.html" %}</div>
+        
+    <div class="slide" id="slide-cornerstone" 
+        data-previous="slide1" data-next="slide1"
+        >{% include "tawebsite/survey_partials/cornerstone_intro.html" %}</div>
+        
+    <div class="slide" id="slide-echelon" 
+        data-previous="slide1" data-next="slide1"
+        >{% include "tawebsite/survey_partials/echelon_intro.html" %}</div>
+        
+</div>
 <div class="continue-container">
-    <button class="btn btn-main" href="#">Continue</button>
+    <button id="next" class="btn btn-main">Continue</button>
 </div>
 
 {% endblock %}
