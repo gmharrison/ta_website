@@ -1,7 +1,8 @@
 body{
     font-family: 'Lato', sans-serif;
     color: #8e8e8e;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 300;
 }
 .header{
     color: white;
@@ -39,7 +40,6 @@ body{
             background: white;
         }
 }
-
 *// BUTTONS //*
 .btn-main{
     background: #4ac8ef;
@@ -62,19 +62,34 @@ body{
     }
 }
 .btn.survey-select{
-    background-color: #F4F7F8;
+    background-color: #f9fbfb;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 300;
     padding: 1em 2em;
     border-radius: 6px;
-    border: 1px solid #E1E4E6;
+    border-right: 2px solid #E1E4E6;
+    border-bottom: 2px solid #E1E4E6;
     transition: all 0.2s ease;
-    
+    display: inline-block;
+    margin: 10px;
     &:hover{
         background: #EDEDED;
     }
+    &.academic{
+        color: #4ac8ef;
+    }
+    &.cornerstone{
+        color: #79C367;
+    }
+    &.echelon{
+        color: #F16162;
+    }
 }
+.btn.survey-select.grade{
+    padding: .5em 1em;
+}
+
 .btn.survey-select.active{
     background: #EDEDED;
     color: #8e8e8e;
@@ -83,13 +98,14 @@ body{
 *// END BUTTONS //*
 
 .jumbotron{
-    height: 500px;
+    height: 590px;
     position: relative;
     background: #848484;
-    background-image: url("/static/img/landingpage-photo2.png");
+    background-image: url("/static/img/landingpage-photo4.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -150px;
+    background-position: center;
+    margin-bottom: 0;
     .content-container{
         position: absolute;
         text-align: center;
@@ -99,26 +115,26 @@ body{
     }
 }
 .container{
-    position: relative;
     .sub-jumbotron.row{
-        margin-top: 40px;
-        position: absolute;
         text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
         .landing-img{
             width: 200px;
             height: auto;
         }
         .col-md-4{
             p{
-                padding: 30px 50px;
+                padding: 0 50px;
                 text-align: center;
             }
         }
     }
+}
+.landing-content{
+    padding: 100px 50px;
+}
+.footer{
+    background-color: #4c4c4c;
+    padding: 30px;
 }
 
 
@@ -127,58 +143,94 @@ body{
 ////////////
 .survey-header-container{
     background: #4ac8ef;
-    height: 300px;
+    height: 370px;
     position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
-    &.echelon{
+    &.more-information{
         background: #F16162;
-    }
-    &.cornerstone{
-        background: #79C367;
     }
     .content-container{
         text-align: left;
         color: white;
         position: absolute;
         top: 25%;
-        padding: 0 40% 0 30px;
+        padding: 0 50% 0 30px;
     }
 }
 .topic-container{
-    background-color: #F4F7F8;
-    height: 70px;
-    padding: 25px 0 0 30px;
-    
+    background-color: #f9fbfb;
+    padding: 25px 30px;
     h4{
         margin: 0;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 .row.card-information{
-    padding: 30px 10% 0 10%;
-    .col-md-4{
-        margin: 20px 0;
-        padding-left: 45px;
+    >div{
+        text-align: center;
     }
-    form{
-        display: inline;
-        width: 60px;
-        .form-group{
-            display: inline;
-            width: 60px;
-            .form-control{
-                width: 60px;
-                display: inline;
-                margin: 0 5px;
-            }
-        }
+    .col-md-1{
+        margin: 0 10px;
     }
     p{
         display: inline;
     }
 }
+.grade-container{
+    margin-top: 20px;
+}
+.option-container{
+    padding: 30px;
+    .subject-text{
+        padding-bottom: 20px;
+    }
+    .form-group.number-children{
+        display: inline;
+        width: 60px;
+        .form-text{
+        }
+        .form-control{
+            width: 60px;
+            display: inline;
+            margin: 0 5px;
+        }
+    }
+    .form-group.contact-information{
+        label{
+            font-weight: 300;
+        }
+        .form-control{
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #8e8e8e;
+            background-color: #f9fbfb;
+            background-image: none;
+            border: 1px solid #E1E4E6;
+            box-shadow: none;
+            
+            #placeholder{
+                color: #E1E4E6;
+            }
+        }
+    }
+    .option-select{
+        .checkbox.option-input{
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+}
+
 .continue-container{
-    padding: 30px 10% 0 30px;
+    padding: 30px 2% 0 30px;
     float: right;
 }
 .back-btn-container{
@@ -193,3 +245,21 @@ body{
     color: white;
     border-radius: 45px;
 }
+
+  @media screen and (min-width: 1400px){
+      @import 'desktop-wide'
+  }
+  
+   @media screen and (max-width: 1399px) and (min-width: 993px){
+      @import 'desktop'
+  }
+  
+  @media screen and (max-width: 992px) and (min-width: 769px){
+      @import 'small-devices'
+  }
+  
+  @media screen and (max-width: 768px){
+      @import 'mobile'
+  }
+  
+  

@@ -8,25 +8,44 @@
   <div class="content-container">
     <h3 class="header">We believe that tutoring succeeds when relationships are built on trust, empathy, and respect.</h3>
     <p></p>
-    <p><a class="btn btn-main" href="{% url "survey" %}" role="button">Learn more</a></p>
+    <p><a class="btn btn-main" href="{% url "survey" %}" role="button">Get Started</a></p>
   </div>
 </div>
-<div class="container">
-  <div class="sub-jumbotron row">
-    <div class="col-md-4">
-      <img src="{% static "img/book-icon.svg" %}" class="landing-img">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="{% static "img/pencil-icon.svg" %}" class="landing-img">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
-    </div>
-    <div class="col-md-4">
-      <img src="{% static "img/world-icon.svg" %}" class="landing-img">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
+<div class="landing-content">
+  <div class="container">
+    <div class="sub-jumbotron row">
+      <div class="col-md-4">
+        <img src="{% static "img/tutor-icon.svg" %}" class="landing-img">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static "img/book-icon.svg" %}" class="landing-img">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static "img/world-icon.svg" %}" class="landing-img">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend vel est ac eleifend afahuk.</p>
+      </div>
     </div>
   </div>
 </div>
 
 {% endblock %}
 
+{% block footer %}
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        Content
+      </div>
+      <div class="col-md-4">
+        Content
+      </div>
+      <div class="col-md-4">
+        Content
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+.survey-header-container{
+    background: #4ac8ef;
+    height: 370px;
+    position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -100px;
+    .content-container{
+        p{
+            font-weight: 300;
+        }
+    }
+}
+.row.card-information{
+    .btn.survey-select{
+        padding: .5em 1em;
+        font-size: 16px;
+    }
+}

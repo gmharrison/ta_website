@@ -1,7 +1,8 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #8e8e8e;
-  font-size: 14px; }
+  font-size: 16px;
+  font-weight: 300; }
 
 .header {
   color: white; }
@@ -55,16 +56,28 @@ body {
     color: #e5e5e5; }
 
 .btn.survey-select {
-  background-color: #F4F7F8;
+  background-color: #f9fbfb;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 300;
   padding: 1em 2em;
   border-radius: 6px;
-  border: 1px solid #E1E4E6;
-  transition: all 0.2s ease; }
+  border-right: 2px solid #E1E4E6;
+  border-bottom: 2px solid #E1E4E6;
+  transition: all 0.2s ease;
+  display: inline-block;
+  margin: 10px; }
   .btn.survey-select:hover {
     background: #EDEDED; }
+  .btn.survey-select.academic {
+    color: #4ac8ef; }
+  .btn.survey-select.cornerstone {
+    color: #79C367; }
+  .btn.survey-select.echelon {
+    color: #F16162; }
+
+.btn.survey-select.grade {
+  padding: .5em 1em; }
 
 .btn.survey-select.active {
   background: #EDEDED;
@@ -73,13 +86,14 @@ body {
 
 *
 .jumbotron {
-  height: 500px;
+  height: 590px;
   position: relative;
   background: #848484;
-  background-image: url("/static/img/landingpage-photo2.png");
+  background-image: url("/static/img/landingpage-photo4.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -150px; }
+  background-position: center;
+  margin-bottom: 0; }
   *
   .jumbotron .content-container {
     position: absolute;
@@ -88,66 +102,89 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%); }
 
-.container {
-  position: relative; }
-  .container .sub-jumbotron.row {
-    margin-top: 40px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; }
-    .container .sub-jumbotron.row .landing-img {
-      width: 200px;
-      height: auto; }
-    .container .sub-jumbotron.row .col-md-4 p {
-      padding: 30px 50px;
-      text-align: center; }
+.container .sub-jumbotron.row {
+  text-align: center; }
+  .container .sub-jumbotron.row .landing-img {
+    width: 200px;
+    height: auto; }
+  .container .sub-jumbotron.row .col-md-4 p {
+    padding: 0 50px;
+    text-align: center; }
+
+.landing-content {
+  padding: 100px 50px; }
+
+.footer {
+  background-color: #4c4c4c;
+  padding: 30px; }
 
 .survey-header-container {
   background: #4ac8ef;
-  height: 300px;
-  position: relative; }
-  .survey-header-container.echelon {
+  height: 370px;
+  position: relative;
+  background-image: url("/static/img/survey-photo3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .survey-header-container.more-information {
     background: #F16162; }
-  .survey-header-container.cornerstone {
-    background: #79C367; }
   .survey-header-container .content-container {
     text-align: left;
     color: white;
     position: absolute;
     top: 25%;
-    padding: 0 40% 0 30px; }
+    padding: 0 50% 0 30px; }
 
 .topic-container {
-  background-color: #F4F7F8;
-  height: 70px;
-  padding: 25px 0 0 30px; }
+  background-color: #f9fbfb;
+  padding: 25px 30px; }
   .topic-container h4 {
     margin: 0;
-    font-weight: 300; }
+    font-weight: 400; }
 
-.row.card-information {
-  padding: 30px 10% 0 10%; }
-  .row.card-information .col-md-4 {
-    margin: 20px 0;
-    padding-left: 45px; }
-  .row.card-information form {
+.row.card-information > div {
+  text-align: center; }
+.row.card-information .col-md-1 {
+  margin: 0 10px; }
+.row.card-information p {
+  display: inline; }
+
+.grade-container {
+  margin-top: 20px; }
+
+.option-container {
+  padding: 30px; }
+  .option-container .subject-text {
+    padding-bottom: 20px; }
+  .option-container .form-group.number-children {
     display: inline;
     width: 60px; }
-    .row.card-information form .form-group {
+    .option-container .form-group.number-children .form-control {
+      width: 60px;
       display: inline;
-      width: 60px; }
-      .row.card-information form .form-group .form-control {
-        width: 60px;
-        display: inline;
-        margin: 0 5px; }
-  .row.card-information p {
-    display: inline; }
+      margin: 0 5px; }
+  .option-container .form-group.contact-information label {
+    font-weight: 300; }
+  .option-container .form-group.contact-information .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #8e8e8e;
+    background-color: #f9fbfb;
+    background-image: none;
+    border: 1px solid #E1E4E6;
+    box-shadow: none; }
+    .option-container .form-group.contact-information .form-control #placeholder {
+      color: #E1E4E6; }
+  .option-container .option-select .checkbox.option-input {
+    display: inline-block;
+    margin: 0 10px; }
 
 .continue-container {
-  padding: 30px 10% 0 30px;
+  padding: 30px 2% 0 30px;
   float: right; }
 
 .back-btn-container {
@@ -161,5 +198,80 @@ body {
   border-color: white;
   color: white;
   border-radius: 45px; }
+
+@media screen and (min-width: 1400px) {
+  .survey-header-container {
+    background: #4ac8ef;
+    height: 480px;
+    position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -150px; }
+    .survey-header-container .content-container {
+      text-align: left;
+      color: white;
+      position: absolute;
+      top: 25%;
+      padding: 0 50% 0 30px; }
+      .survey-header-container .content-container h3 {
+        font-size: 36px; }
+      .survey-header-container .content-container p {
+        font-size: 20px;
+        font-weight: 300; } }
+@media screen and (max-width: 1399px) and (min-width: 993px) {
+  .survey-header-container {
+    background: #4ac8ef;
+    height: 370px;
+    position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px; }
+    .survey-header-container p {
+      font-size: 16px;
+      font-weight: 300; } }
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .survey-header-container {
+    background: #4ac8ef;
+    height: 370px;
+    position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -100px; }
+    .survey-header-container .content-container p {
+      font-weight: 300; }
+
+  .row.card-information .btn.survey-select {
+    padding: .5em 1em;
+    font-size: 16px; } }
+@media screen and (max-width: 768px) {
+  .sub-jumbotron.row .col-md-4 {
+    padding: 0 150px;
+    margin-bottom: 50px; }
+    .sub-jumbotron.row .col-md-4 p {
+      margin-top: 10px; }
+
+  .survey-header-container {
+    background: #4ac8ef;
+    height: 370px;
+    position: relative;
+    background-image: url("/static/img/survey-photo3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    .survey-header-container .content-container {
+      top: 20%;
+      text-align: center;
+      padding: 0 20%; }
+
+  .row.card-information .col-xs-4 {
+    display: inline-block; }
+  .row.card-information .btn.survey-select {
+    padding: .5em 1em;
+    font-size: 16px; } }
 
 /*# sourceMappingURL=home.css.map */

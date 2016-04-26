@@ -6,8 +6,8 @@ Error: Invalid CSS after "": expected selector, was "{% extends "taw..."
 2: {% load staticfiles %}
 3: 
 4: {% block content_main %}
-5: <div class="slides">
-6:     <div class="slide">{% include "tawebsite/survey_intro.html" %}</div>
+5: <div class="back-btn-container"><button id="back-btn" class="btn btn-default glyphicon glyphicon-chevron-left" style="display:none;"></button></div>
+6: <div class="slides">
 
 Backtrace:
 /home/ubuntu/workspace/tawebsite/templates/tawebsite/survey.html:1
@@ -55,4 +55,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"\": expected selector, was \"{% extends \"taw...\"\A         on line 1 of /home/ubuntu/workspace/tawebsite/templates/tawebsite/survey.html\A \A 1: {% extends \"tawebsite/layout_full.html\" %}\A 2: {% load staticfiles %}\A 3: \A 4: {% block content_main %}\A 5: <div class=\"slides\">\A 6:     <div class=\"slide\">{% include \"tawebsite/survey_intro.html\" %}</div>"; }
+  content: "Error: Invalid CSS after \"\": expected selector, was \"{% extends \"taw...\"\A         on line 1 of /home/ubuntu/workspace/tawebsite/templates/tawebsite/survey.html\A \A 1: {% extends \"tawebsite/layout_full.html\" %}\A 2: {% load staticfiles %}\A 3: \A 4: {% block content_main %}\A 5: <div class=\"back-btn-container\"><button id=\"back-btn\" class=\"btn btn-default glyphicon glyphicon-chevron-left\" style=\"display:none;\"></button></div>\A 6: <div class=\"slides\">"; }

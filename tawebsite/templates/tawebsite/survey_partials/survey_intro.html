@@ -9,23 +9,35 @@
 <div class="topic-container">
     <h4 class="survey-topic-header">I want tutoring in (click all that apply):</h4>
 </div>
-<div class="row card-information">
-    <div class="col-md-4">
-        <button id='btn-academic' type="button" 
-            class="btn survey-select next-slide-select" data-next="slide-academic">
-            <span style="color: #4AC8EF">academic</span>
-        </button>
-    </div>
-    <div class="col-md-4">
-        <button id='btn-echelon' type="button" 
-            class="btn survey-select next-slide-select" data-next="slide-echelon">
-            <span style="color: #F16162">echelon</span>
-        </button>
-    </div>
-    <div class="col-md-4">
-        <button id='btn-cornerstone' type="button" 
-            class="btn survey-select next-slide-select" data-next="slide-cornerstone">
-            <span style="color: #79C367">cornerstone</span>
-        </button>
+<div class="option-container">
+    <div class="row card-information">
+        <div class="col-md-4 col-xs-4">
+            <button id='btn-academic' type="button" 
+                class="btn survey-select academic next-slide-select" data-next="slide-academic">
+                academic
+            </button>
+        </div>
+        <div class="col-md-4 col-xs-4">
+            <button id='btn-echelon' type="button" 
+                class="btn survey-select echelon next-slide-select" data-next="slide-echelon">
+                echelon
+            </button>
+        </div>
+        <div class="col-md-4 col-xs-4">
+            <button id='btn-cornerstone' type="button" 
+                class="btn survey-select cornerstone next-slide-select" data-next="slide-cornerstone">
+                cornerstone
+            </button>
+        </div>
     </div>
 </div>
+<form>
+    {% include "tawebsite/survey_partials/survey_more_info.html" %}
+    {% include "tawebsite/survey_partials/academic_intro.html" %}
+    {% include "tawebsite/survey_partials/cornerstone_intro.html" %}
+    {% include "tawebsite/survey_partials/echelon_intro.html" %}
+    {% include "tawebsite/survey_partials/academic_rates.html" %}
+    {% include "tawebsite/survey_partials/cornerstone_rates.html" %}
+    {% include "tawebsite/survey_partials/echelon_rates.html" %}
+    {% include "tawebsite/survey_partials/welcome_message.html" %}
+</form>

@@ -1,0 +1,22 @@
+.survey-header-container {
+  background: #4ac8ef;
+  height: 480px;
+  position: relative;
+  background-image: url("/static/img/survey-photo3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: -150px; }
+  .survey-header-container .content-container {
+    text-align: left;
+    color: white;
+    position: absolute;
+    top: 25%;
+    padding: 0 50% 0 30px; }
+    .survey-header-container .content-container h3 {
+      font-size: 36px; }
+    .survey-header-container .content-container p {
+      font-size: 20px;
+      font-weight: 300; }
+
+/*# sourceMappingURL=desktop-wide.css.map */
