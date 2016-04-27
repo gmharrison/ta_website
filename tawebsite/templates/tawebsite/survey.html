@@ -2,24 +2,51 @@
 {% load staticfiles %}
 
 {% block content_main %}
-<div class="back-btn-container"><button id="back-btn" class="btn btn-default glyphicon glyphicon-chevron-left" style="display:none;"></button></div>
+<div class="back-btn-container">
+    <button 
+        id="back-btn" 
+        class="btn btn-default glyphicon glyphicon-chevron-left" 
+        style="display:none;"></button>
+</div>
+
+<form>
 <div class="slides">
     
-    <div class="slide active" id="slide1">{% include "tawebsite/survey_partials/survey_intro.html" %}</div>
+    <div class="slide active" id="slide-program"
+        data-next="slide-questions">
+        {% include "tawebsite/survey_partials/survey_intro.html" %}
+    </div>
     
-    <div class="slide" id="slide-academic" 
-        data-previous="slide1" data-next="slide1"
-        >{% include "tawebsite/survey_partials/academic_intro.html" %}</div>
+    <div class="slide" id="slide-questions" 
+        data-previous="slide-program" data-next="slide-pricing">
         
-    <div class="slide" id="slide-cornerstone" 
-        data-previous="slide1" data-next="slide1"
-        >{% include "tawebsite/survey_partials/cornerstone_intro.html" %}</div>
+        <div class="survey-section default-section">{% include "tawebsite/survey_partials/survey_more_info.html" %}</div>
+        <div class="survey-section questionAcademic">{% include "tawebsite/survey_partials/academic_intro.html" %}</div>
+        <div class="survey-section questionCornerstone">{% include "tawebsite/survey_partials/cornerstone_intro.html" %}</div>
+        <div class="survey-section questionEchelon">{% include "tawebsite/survey_partials/echelon_intro.html" %}</div>
         
-    <div class="slide" id="slide-echelon" 
-        data-previous="slide1" data-next="slide1"
-        >{% include "tawebsite/survey_partials/echelon_intro.html" %}</div>
+    </div>
+        
+    <div class="slide" id="slide-pricing" 
+        data-previous="slide-questions" data-next="slide-contact">
+        
+        <div class="survey-section questionAcademic">{% include "tawebsite/survey_partials/academic_rates.html" %}</div>
+        <div class="survey-section questionCornerstone">{% include "tawebsite/survey_partials/cornerstone_rates.html" %}</div>
+        <div class="survey-section questionEchelon">{% include "tawebsite/survey_partials/echelon_rates.html" %}</div>
+        
+    </div>
+        
+    <div class="slide" id="slide-contact" 
+        data-previous="slide-pricing">
+        
+        <div class="survey-section default-section">{% include "tawebsite/survey_partials/welcome_message.html" %}</div>
+        
+    </div>
+        
         
 </div>
+</form>
+
 <div class="continue-container">
     <button id="next" class="btn btn-main">Continue</button>
 </div>

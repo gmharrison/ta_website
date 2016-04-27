@@ -137,7 +137,7 @@ body {
 
 .topic-container {
   background-color: #f9fbfb;
-  padding: 25px 30px; }
+  padding: 25px 30px 25px 65px; }
   .topic-container h4 {
     margin: 0;
     font-weight: 400; }
@@ -193,10 +193,10 @@ body {
 
 #back-btn {
   z-index: 1;
-  margin: 30px;
+  margin: 18px;
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: #999;
+  color: #999;
   border-radius: 45px; }
 
 @media screen and (min-width: 1400px) {

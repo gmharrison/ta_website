@@ -4,7 +4,7 @@ $(function(){
     var academic = false;
     var cornerstone = false;
     var echelon = false;
-    var nextSlideID = '';
+    var nextSlideID = $('.slide').first().data('next');
     var prevSlideID = '';
     
     function showSlide(slideID_or_$){
@@ -25,12 +25,49 @@ $(function(){
         else $('#back-btn').show();
     }
     
+    function enableProgramSections(className, enabledBool){
+        if(enabledBool){
+            console.log('show: ' + className);
+            $('.' + className).show();
+        }
+        else{
+            console.log('hide: ' + className);
+            $('.' + className).hide();
+        }
+        
+    }
+    
     // Page load set up
     $(".slide").each(function(e) {if (e != 0) $(this).hide();});                    // hide all slides except first
-    $(".btn.survey-select").click(function(){$(this).toggleClass("active");});      // survey select buttons toggle .active on click
-    $('.next-slide-select').click(function(){nextSlideID = $(this).data('next');}); // survey select saves nextSlideID
+    $('.survey-section').hide();
+    $('.default-section').show();
+    
     $("#next").click(function(){showSlide(nextSlideID);});                          // next button selects slide using nextSlideID
     $('#back-btn').click(function(){showSlide(prevSlideID);});                      // back button selects slide using prevSlideID
+    $(".btn.survey-select").click(function(){$(this).toggleClass("active");});      // survey select buttons toggle .active on click
+    
+    $('.program-select').click(function(){ // enables questions specific to certain programs
+        console.log('select');
+        if($(this).hasClass('academic')){
+            
+            academic = !academic;
+            console.log(academic);
+            enableProgramSections('questionAcademic', academic);
+        }
+        else if($(this).hasClass('cornerstone')){
+            
+            cornerstone = !cornerstone;
+            console.log(cornerstone);
+            enableProgramSections('questionCornerstone', cornerstone);
+        }
+        else if($(this).hasClass('echelon')){
+            
+            echelon = !echelon;
+            console.log(echelon);
+            enableProgramSections('questionEchelon', echelon);
+        }
+        
+    }); 
     
 });
     
