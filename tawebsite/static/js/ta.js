@@ -23,6 +23,7 @@ $(function(){
         prevSlideID = $slide.data('previous');
         if(!prevSlideID) $('#back-btn').hide();
         else $('#back-btn').show();
+        $(window).scrollTop(0);
     }
     
     function enableProgramSections(className, enabledBool){

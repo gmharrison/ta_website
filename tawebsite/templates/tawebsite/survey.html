@@ -2,12 +2,6 @@
 {% load staticfiles %}
 
 {% block content_main %}
-<div class="back-btn-container">
-    <button 
-        id="back-btn" 
-        class="btn btn-default glyphicon glyphicon-chevron-left" 
-        style="display:none;"></button>
-</div>
 
 <form>
 <div class="slides">
@@ -20,6 +14,7 @@
     <div class="slide" id="slide-questions" 
         data-previous="slide-program" data-next="slide-pricing">
         
+        <div class="more-info-header default-section">{% include "tawebsite/survey_partials/more_info_header.html" %}</div>
         <div class="survey-section default-section">{% include "tawebsite/survey_partials/survey_more_info.html" %}</div>
         <div class="survey-section questionAcademic">{% include "tawebsite/survey_partials/academic_intro.html" %}</div>
         <div class="survey-section questionCornerstone">{% include "tawebsite/survey_partials/cornerstone_intro.html" %}</div>
@@ -30,6 +25,7 @@
     <div class="slide" id="slide-pricing" 
         data-previous="slide-questions" data-next="slide-contact">
         
+        <div class="pricing-header default-section">{% include "tawebsite/survey_partials/pricing_header.html" %}</div>
         <div class="survey-section questionAcademic">{% include "tawebsite/survey_partials/academic_rates.html" %}</div>
         <div class="survey-section questionCornerstone">{% include "tawebsite/survey_partials/cornerstone_rates.html" %}</div>
         <div class="survey-section questionEchelon">{% include "tawebsite/survey_partials/echelon_rates.html" %}</div>
@@ -42,13 +38,35 @@
         <div class="survey-section default-section">{% include "tawebsite/survey_partials/welcome_message.html" %}</div>
         
     </div>
-        
-        
 </div>
 </form>
-
+<div class="button-container">
+<div class="back-btn-container">
+    <button 
+        id="back-btn" 
+        class="btn btn-main">Back</button>
+</div>
 <div class="continue-container">
     <button id="next" class="btn btn-main">Continue</button>
 </div>
+</div>
 
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        Content
+      </div>
+      <div class="col-md-4">
+        Content
+      </div>
+      <div class="col-md-4">
+        Content
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
