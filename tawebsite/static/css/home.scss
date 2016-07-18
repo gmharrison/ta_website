@@ -138,7 +138,9 @@ body{
         transform: translateX(-50%) translateY(-50%);
     }
 }
-.container{
+.container-fluid.landing{
+    max-width: 1060px;
+    
     .sub-jumbotron.row{
         text-align: center;
         .landing-img{
@@ -159,12 +161,18 @@ body{
 .footer{
     background-color: #4c4c4c;
     padding: 30px;
+    text-align: center;
+    
 }
 
 
 ////////////
 // SURVEY //
 ////////////
+.container-fluid{
+    max-width: 1060px;
+}
+
 .survey-header-container{
     background: #4ac8ef;
     height: 370px;
@@ -187,17 +195,26 @@ body{
         background-size: cover;
         background-position: center;
     }
+    
+    &.contact{
+        background-image: url("/static/img/survey-photo8.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
     .content-container{
         text-align: left;
         color: white;
-        position: absolute;
-        top: 25%;
-        padding: 0 50% 0 100px;
+        
+        .col-md-12{
+            padding: 10% 50% 15px 15px;
+        }
     }
 }
 .survey-progress{
     background-color: #4c4c4c;
     padding: 20px 250px 0 250px;
+    width: 100%;
     .progress-header{
         text-align: center;
         text-transform: uppercase;
@@ -233,7 +250,6 @@ body{
         text-align: left;
         margin-bottom: 20px;
         border-radius: 10px;
-        padding: 0 20px;
     }
 }
 .survey-section{
@@ -243,7 +259,7 @@ body{
     background-color: white;
     
     &.intro{
-        margin: 50px 100px;
+      margin-top: 30px;
     }
     &.contact-container{
         border-top-left-radius: 10px;
@@ -312,11 +328,9 @@ body{
     height: 175px;
 }
 .continue-container{
-    padding: 10px 100px 0 30px;
     float: right;
 }
 .back-btn-container{
-    padding: 10px 2% 0 100px;
     float: left;
     display: inline-block;
 }

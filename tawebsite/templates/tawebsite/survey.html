@@ -34,21 +34,21 @@
         
     <div class="slide" id="slide-contact" 
         data-previous="slide-pricing">
-        
+        <div class="contact-header default-section">{% include "tawebsite/survey_partials/welcome_message_header.html" %}</div>
         <div class="survey-section default-section">{% include "tawebsite/survey_partials/welcome_message.html" %}</div>
         
     </div>
 </div>
 </form>
-<div class="button-container">
-<div class="back-btn-container">
-    <button 
-        id="back-btn" 
-        class="btn btn-main">Back</button>
-</div>
-<div class="continue-container">
-    <button id="next" class="btn btn-main">Continue</button>
-</div>
+<div class="button-container container-fluid">
+  <div class="back-btn-container">
+      <button 
+          id="back-btn" 
+          class="btn btn-main">Back</button>
+  </div>
+  <div class="continue-container">
+      <button id="next" class="btn btn-main">Continue</button>
+  </div>
 </div>
 
 {% endblock %}
