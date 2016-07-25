@@ -1,6 +1,5 @@
 .survey-header-container {
   background: #4ac8ef;
-  height: 480px;
   position: relative;
   background-image: url("/static/img/survey-photo3.png");
   background-repeat: no-repeat;
@@ -8,8 +7,6 @@
   background-position: center;
   background-position-y: -150px; }
   .survey-header-container .content-container {
-    text-align: left;
-    color: white;
     max-width: 1060px; }
     .survey-header-container .content-container .col-md-12 {
       padding: 2% 50% 15px 15px; }

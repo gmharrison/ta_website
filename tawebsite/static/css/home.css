@@ -4,9 +4,6 @@ body {
   font-size: 16px;
   font-weight: 300; }
 
-.header {
-  color: white; }
-
 .navbar-default {
   z-index: 100;
   background: white;
@@ -141,9 +138,15 @@ body {
 .container-fluid {
   max-width: 1060px; }
 
+.survey-text-container {
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px; }
+
 .survey-header-container {
   background: #4ac8ef;
-  height: 370px;
+  padding: 100px 340px;
   position: relative;
   background-image: url("/static/img/survey-photo3.png");
   background-repeat: no-repeat;
@@ -164,11 +167,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
-  .survey-header-container .content-container {
-    text-align: left;
-    color: white; }
-    .survey-header-container .content-container .col-md-12 {
-      padding: 10% 50% 15px 15px; }
 
 .survey-progress {
   background-color: #4c4c4c;
@@ -267,7 +265,6 @@ body {
 @media screen and (min-width: 1400px) {
   .survey-header-container {
     background: #4ac8ef;
-    height: 480px;
     position: relative;
     background-image: url("/static/img/survey-photo3.png");
     background-repeat: no-repeat;
@@ -275,8 +272,6 @@ body {
     background-position: center;
     background-position-y: -150px; }
     .survey-header-container .content-container {
-      text-align: left;
-      color: white;
       max-width: 1060px; }
       .survey-header-container .content-container .col-md-12 {
         padding: 2% 50% 15px 15px; }
@@ -285,18 +280,6 @@ body {
       .survey-header-container .content-container p {
         font-size: 20px;
         font-weight: 300; } }
-@media screen and (max-width: 1399px) and (min-width: 993px) {
-  .survey-header-container {
-    background: #4ac8ef;
-    height: 370px;
-    position: relative;
-    background-image: url("/static/img/survey-photo3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -150px; }
-    .survey-header-container p {
-      font-size: 16px;
-      font-weight: 300; } }
 @media screen and (max-width: 992px) and (min-width: 769px) {
   .survey-header-container {
     background: #4ac8ef;

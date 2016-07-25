@@ -4,9 +4,7 @@ body{
     font-size: 16px;
     font-weight: 300;
 }
-.header{
-    color: white;
-}
+
 .navbar-default{
     z-index: 100;
     background: white;
@@ -173,9 +171,19 @@ body{
     max-width: 1060px;
 }
 
+.survey-text-container{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    .header{
+        
+    }
+}
+
 .survey-header-container{
     background: #4ac8ef;
-    height: 370px;
+    padding: 100px 340px;
     position: relative;
     background-image: url("/static/img/survey-photo3.png");
     background-repeat: no-repeat;
@@ -201,14 +209,6 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    }
-    .content-container{
-        text-align: left;
-        color: white;
-        
-        .col-md-12{
-            padding: 10% 50% 15px 15px;
-        }
     }
 }
 .survey-progress{
@@ -338,10 +338,7 @@ body{
   @media screen and (min-width: 1400px){
       @import 'desktop-wide'
   }
-  
-   @media screen and (max-width: 1399px) and (min-width: 993px){
-      @import 'desktop'
-  }
+ 
   
   @media screen and (max-width: 992px) and (min-width: 769px){
       @import 'small-devices'
