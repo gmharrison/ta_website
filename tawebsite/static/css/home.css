@@ -103,7 +103,7 @@ body {
   height: 590px;
   position: relative;
   background: #848484;
-  background-image: url("/static/img/landingpage-photo4.png");
+  background-image: url("../img/landingpage-photo4.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -146,24 +146,24 @@ body {
 
 .survey-header-container {
   background: #4ac8ef;
-  padding: 100px 340px;
+  padding: 230px 340px;
   position: relative;
-  background-image: url("/static/img/survey-photo3.png");
+  background-image: url("../img/survey-photo3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
   .survey-header-container.more-information {
-    background-image: url("/static/img/survey-photo4.png");
+    background-image: url("../img/survey-photo4.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .survey-header-container.pricing {
-    background-image: url("/static/img/survey-photo7.png");
+    background-image: url("../img/survey-photo7.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .survey-header-container.contact {
-    background-image: url("/static/img/survey-photo8.png");
+    background-image: url("../img/survey-photo8.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
