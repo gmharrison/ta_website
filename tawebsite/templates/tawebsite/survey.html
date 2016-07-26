@@ -5,17 +5,39 @@
 
 <form>
 <div class="slides">
-    
-    <div class="slide active" id="slide-program"
+
+    <div class="slide" id="slide-program"
         data-next="slide-questions">
-        {% include "tawebsite/survey_partials/survey_intro.html" %}
-        <!--type of tutoring here-->
+        <div class="survey-header-container">
+            <div class="container-fluid">
+                <div class="content-container row">
+                    <div class="col-md-12">
+                        <div class="survey-container">
+                            <div class="survey-text-container">
+                            {% include "tawebsite/survey_partials/survey_intro.html" %}
+                            <div class="survey-section">{% include "tawebsite/survey_partials/type_of_tutoring.html" %}</div>
+                            <!--<div class="back-btn-container">
+                            <button
+                            id="back-btn"
+                            class="btn btn-main">Back</button>
+                            </div>-->
+                            </div>
+                            <div class="line-separator"></div>
+                            <div class="continue-container first-slide">
+                                <button id="next" class="btn btn-main">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     
     <div class="slide" id="slide-questions" 
         data-previous="slide-program" data-next="slide-pricing">
-        
-        <div class="more-info-header default-section">{% include "tawebsite/survey_partials/more_info_header.html" %}</div>
+
+       <div class="more-info-header default-section">{% include "tawebsite/survey_partials/more_info_header.html" %}</div>
         <div class="survey-section default-section">{% include "tawebsite/survey_partials/survey_more_info.html" %}</div>
         <div class="survey-section questionAcademic">{% include "tawebsite/survey_partials/academic_intro.html" %}</div>
         <div class="survey-section questionCornerstone">{% include "tawebsite/survey_partials/cornerstone_intro.html" %}</div>
@@ -41,16 +63,6 @@
     </div>
 </div>
 </form>
-<div class="button-container container-fluid">
-  <div class="back-btn-container">
-      <button 
-          id="back-btn" 
-          class="btn btn-main">Back</button>
-  </div>
-  <div class="continue-container">
-      <button id="next" class="btn btn-main">Continue</button>
-  </div>
-</div>
 
 {% endblock %}
 

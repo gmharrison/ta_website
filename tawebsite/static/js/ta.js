@@ -9,7 +9,7 @@ $(function(){
     
     function showSlide(slideID_or_$){
         if (typeof slideID_or_$ == "undefined" || slideID_or_$ == '' || slideID_or_$ == null){
-            
+
             // TODO This occurs when the user probably hasn't picked an option yet
             console.log('No Slide ID, maybe user has not picked an opiton');
             return;
@@ -43,7 +43,11 @@ $(function(){
     $('.survey-section').hide();
     $('.default-section').show();
     
-    $("#next").click(function(){showSlide(nextSlideID);});                          // next button selects slide using nextSlideID
+    $("#next").click(function(e){
+        showSlide(nextSlideID);
+        e.preventDefault();
+        return false;
+    });                          // next button selects slide using nextSlideID
     $('#back-btn').click(function(){showSlide(prevSlideID);});                      // back button selects slide using prevSlideID
     $(".btn.survey-select").click(function(){$(this).toggleClass("active");});      // survey select buttons toggle .active on click
     

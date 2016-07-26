@@ -34,23 +34,29 @@ body {
 
 *
 .btn-main {
-  background: #4ac8ef;
+  background-color: white;
   text-transform: uppercase;
-  font-weight: 700;
-  color: white;
-  font-size: 18px;
-  margin-top: 20px;
-  padding: 1em 2em;
-  border-radius: 6px;
-  border-bottom: 4px solid #9adaf1;
+  font-size: 16px;
   transition: all 0.2s ease; }
   *
   .btn-main:hover {
-    background-color: #5bd7f4;
-    color: white; }
-  *
-  .btn-main:focus {
-    color: #e5e5e5; }
+    background-color: #f7f7f7;
+    color: #4ac8ef; }
+
+.back-btn-container {
+  display: inline-block; }
+
+.continue-container {
+  display: inline-block; }
+  .continue-container.first-slide {
+    width: 100%; }
+  .continue-container #next {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 100; }
+    .continue-container #next:hover {
+      background-color: #f7f7f7; }
 
 .btn.survey-select.program-select {
   border-radius: 4px;
@@ -138,20 +144,28 @@ body {
 .container-fluid {
   max-width: 1060px; }
 
-.survey-text-container {
-  background-color: white;
-  text-align: center;
-  padding: 30px;
+.survey-container {
+  background: white;
   border-radius: 8px; }
 
-.survey-header-container {
-  background: #4ac8ef;
-  padding: 230px 340px;
+.survey-text-container {
+  text-align: center;
+  padding: 30px; }
+
+.line-separator {
+  border-top: 1px solid #D0D0D6;
+  height: 1px;
+  margin: 0 15px; }
+
+#slide-program {
   position: relative;
   background-image: url("../img/survey-photo3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.survey-header-container {
+  padding: 230px 340px; }
   .survey-header-container.more-information {
     background-image: url("../img/survey-photo4.png");
     background-repeat: no-repeat;
@@ -201,9 +215,6 @@ body {
     margin-bottom: 20px;
     border-radius: 10px; }
 
-.survey-section {
-  padding: 50px 100px; }
-
 .survey-section-container {
   background-color: white; }
   .survey-section-container.intro {
@@ -251,16 +262,6 @@ body {
   .option-container .option-select .checkbox.option-input {
     display: inline-block;
     margin: 0 10px; }
-
-.button-container {
-  height: 175px; }
-
-.continue-container {
-  float: right; }
-
-.back-btn-container {
-  float: left;
-  display: inline-block; }
 
 @media screen and (min-width: 1400px) {
   .survey-header-container {
